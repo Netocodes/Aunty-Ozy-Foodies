@@ -17,5 +17,9 @@
   },
   "dependencies": {
     "tw-elements": "^2.0.0"
-  }
+  },
+  "description": "An Eatery, A Resturant, We make quality affordable meals for you",
+  "main": "postcss.config.js",
+  "author": "",
+  "license": "ISC"
 }
