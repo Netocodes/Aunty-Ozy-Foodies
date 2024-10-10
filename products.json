@@ -10,7 +10,7 @@
     "id": "2",
     "name": "Vegetable Soup",
     "price": "₦2200",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTpjRCjPD4DzloTztvZ4fE6WoIXHsbYy-Uhw&s",
+    "image": "https://allnigerianfoods.com/wp-content/uploads/water-leave-soup-500x375.jpg",
     "hidden": false
   },
   {
@@ -31,42 +31,50 @@
     "id": "3",
     "name": "Jollof Rice",
     "price": "₦2500",
-    "image": "",
+    "image": "https://allnigerianfoods.com/wp-content/uploads/jollof_rice_recipe1.jpg",
     "hidden": false
   },
   {
     "id": "4",
     "name": "Fried rice",
     "price": "₦2500",
-    "image": "",
+    "image": "https://allnigerianfoods.com/wp-content/uploads/fried_rice_recipe.jpg",
     "hidden": false
   },
   {
     "id": "5",
     "name": "Coconut Rice",
     "price": "₦3000",
-    "image": "",
+    "image": "https://9jafoodie.com/wp-content/uploads/2016/11/UNADJUSTEDNONRAW_thumb_3af2-600x401.jpg",
     "hidden": false
   },
   {
     "id": "6",
-    "name": "Chiken Pepper Soup",
+    "name": "Chiken pp.Soup",
     "price": "₦3000",
-    "image": "",
+    "image": "https://cheflolaskitchen.com/wp-content/uploads/2019/10/352-chicken-pepper-soup.jpg.webp",
+    "hidden": false
+  },
+  {
+    "id": "11",
+    "name": "Nsala Soup",
+    "price": "₦3000",
+    "image": "https://allnigerianfoods.com/wp-content/uploads/Nsala-Soup1-500x375.jpg",
     "hidden": false
   },
   {
     "id": "7",
-    "name": "Spiced mangala",
+    "name": "Snail Soup",
     "price": "₦3000",
-    "image": "",
+    "image": "https://allnigerianfoods.com/wp-content/uploads/snail_soup.jpg",
     "hidden": false
   },
+
   {
     "id": "8",
     "name": "Oxtail",
     "price": "3000",
-    "image": "",
+    "image": "https://cheflolaskitchen.com/wp-content/uploads/2020/01/DSC0794Jamaican-Ox-tail-recipe.jpg.webp",
     "hidden": false
   }
 ]

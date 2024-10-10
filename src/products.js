@@ -1,16 +1,17 @@
 const fetchProducts = async () => {
   try {
     const response = await fetch("products.json");
-
+    console.log(response);
     if (!response.ok) {
       throw new Error("Couldnt Get Product.json");
     }
 
     const data = await response.json();
+
     displayContent(data);
   } catch (error) {
     console.log(error.mesage);
-    console.log("Here is Your error =>", error);
+    console.log("Here is Your error =>", error.log);
   }
 };
 
@@ -20,7 +21,8 @@ const displayContent = (products) => {
   products.forEach((product) => {
     const productCard = document.createElement("div");
     productCard.setAttribute("data-id", product.id);
-    productCard.innerHTML = `<article class="relative flex flex-col overflow-hidden rounded-lg border">
+    productCard.innerHTML = `
+    <article class="relative flex flex-col overflow-hidden rounded-lg border">
             <div class="aspect-square overflow-hidden">
               <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="${product.image}" alt="" />
             </div>
@@ -32,7 +34,7 @@ const displayContent = (products) => {
                 <p class="mr-3 text-2xl font-bold">${product.price}</p>
                 <del class="text-xs text-red-400"> -10% </del> 
               </div>
-              <h3 class="mb-2 text-sm text-gray-400">${product.name}</h3>
+              <h3 class="mb-2 text-lg md:text-3xl font-bold text-gray-500">${product.name}</h3>
             </div>
             <button id="removeBtn" onclick="remove()" data-twe-ripple-init  class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
               <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-[#E65C00] group-hover:text-white">Add</div>
