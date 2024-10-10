@@ -80,7 +80,7 @@ function type() {
   if (index < text.length) {
     typewriterElement.textContent += text.charAt(index);
     index++;
-    setTimeout(type, 200); // Adjust typing speed here
+    setTimeout(type, 100); // Adjust typing speed here
   } else {
     // Optional: Add a blinking cursor effect after typing is done
     typewriterElement.classList.add("animate-blink");

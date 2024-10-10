@@ -4,7 +4,7 @@
 
 @layer utilities {
   .gradient-text {
-    @apply bg-gradient-to-r from-[#fa8025] to-yellow-400; /* Tailwind classes */
+    @apply bg-gradient-to-r from-[#fa8025] to-white; /* Tailwind classes */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
