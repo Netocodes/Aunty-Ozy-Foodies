@@ -1,5 +1,4 @@
 import "./index.css";
-
 import { Ripple } from "tw-elements";
 
 initTWE({ Ripple });
@@ -86,6 +85,20 @@ function type() {
     typewriterElement.classList.add("animate-blink");
   }
 }
-
-// Start the typing effect
 type();
+
+const sr = ScrollReveal();
+sr.reveal(".reveal", {
+  delay: 200,
+  interval: 600,
+  distance: "20px",
+  easing: "ease-in",
+  opacity: 0,
+  reset: false,
+  duration: 800,
+});
+sr.reveal(".scaleUp", {
+  scale: 0.85,
+  delay: 200,
+  reset: true,
+});

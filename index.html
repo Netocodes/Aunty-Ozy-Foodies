@@ -18,11 +18,9 @@
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
     <script src="https://kit.fontawesome.com/8b2de50e77.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-      ScrollReveal({ reset: true });
-     ScrollReveal().reveal('.reveal ');
-  </script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+
+  
     <title>Aunty Ozy Foodies</title>
   </head>
   <body class="bg-[#f1eaeac2]">
@@ -33,7 +31,7 @@
 type="button"
 data-twe-ripple-init
 data-twe-ripple-color="light"
-class="!fixed bottom-5 end-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+class="!fixed bottom-5 end-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg z-[50] focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
 id="btn-back-to-top">
 <p class="sr-only">Back to top </p>
 <span class="[&>svg]:w-4">
@@ -57,7 +55,7 @@ id="btn-back-to-top">
     <!-- Main navigation container -->
 
     <nav
-      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-[#f1eaea]  py-4 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start"
+      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-[#f1eaea]  py-6 md:py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start"
     >
       <div
         class="flex w-full flex-wrap items-center justify-between px-4 md:px-16"
@@ -419,14 +417,14 @@ id="btn-back-to-top">
           <!-- End Title -->
 
           <div class="mt-5 max-w-3xl text-center mx-auto">
-            <p class="text-lg text-blue-100 dark:text-neutral-400">
+            <p class="scaleUp text-lg text-blue-100 dark:text-neutral-400">
               Explore our available products online before visiting our shop.
               For any questions, our AI is here to assist you
             </p>
           </div>
 
           <!-- Buttons -->
-          <div class="mt-8 gap-3 flex justify-center">
+          <div class="scaleUp mt-8 gap-3 flex justify-center">
             <a
               class="inline-flex justify-center items-center gap-x-1 text-center bg-[#E65C00]  text-[#221e1e] text-lg font-bold rounded-full py-3 px-4"
               href="#"
@@ -447,13 +445,13 @@ id="btn-back-to-top">
     <!-- Jumbotron -->
 
 
-    <section class=" reveal bg-white py-12 text-gray-700 sm:py-16 lg:py-20">
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-md text-center">
+    <section class="  bg-white py-12 text-gray-700 sm:py-16 lg:py-20">
+      <div class=" mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal mx-auto max-w-md text-center">
           <h2 class="font-serif text-black underline underline-offset-4 decoration-[#E65C00] text-2xl font-bold sm:text-3xl">Products Page</h2>
         </div>
     
-        <div id="product-container" class="reveal  mt-10 grid grid-cols-2 gap-8 w-full sm:grid-cols-4 sm:gap-4 lg:mt-16">
+        <div id="product-container" class="  mt-10 grid grid-cols-2 gap-4 w-full sm:grid-cols-4 sm:gap-12  lg:mt-16">
          
         </div>
       </div>
@@ -477,10 +475,9 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
   <div class="mx-auto max-w-3xl grid grid-cols-12 gap-6 lg:gap-8">
     <!-- Icon Block -->
     <div class="col-span-6 sm:col-span-4 text-center">
-      <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="10" height="14" x="3" y="8" rx="2"/><path d="M5 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2h-2.4"/><path d="M8 18h.01"/></svg>
-      <div class="mt-2 sm:mt-6">
+      <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>      <div class="mt-2 sm:mt-6">
         <h3 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-          
+          Fast and reliable
         </h3>
       </div>
     </div>
@@ -488,10 +485,9 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
 
     <!-- Icon Block -->
     <div class="col-span-6 sm:col-span-4 text-center">
-      <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
-      <div class="mt-2 sm:mt-6">
+      <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800 dark:text-neutral-200" width="24" height="24"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M353.8 54.1L330.2 6.3c-3.9-8.3-16.1-8.6-20.4 0L286.2 54.1l-52.3 7.5c-9.3 1.4-13.3 12.9-6.4 19.8l38 37-9 52.1c-1.4 9.3 8.2 16.5 16.8 12.2l46.9-24.8 46.6 24.4c8.6 4.3 18.3-2.9 16.8-12.2l-9-52.1 38-36.6c6.8-6.8 2.9-18.3-6.4-19.8l-52.3-7.5zM256 256c-17.7 0-32 14.3-32 32l0 192c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-192c0-17.7-14.3-32-32-32l-128 0zM32 320c-17.7 0-32 14.3-32 32L0 480c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-128c0-17.7-14.3-32-32-32L32 320zm416 96l0 64c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-64c0-17.7-14.3-32-32-32l-128 0c-17.7 0-32 14.3-32 32z"/></svg>      <div class="mt-2 sm:mt-6">
         <h3 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-          Customizable
+          Quality assured
         </h3>
       </div>
     </div>
@@ -502,7 +498,7 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
       <svg class="mx-auto h-auto w-7 md:w-9 text-gray-800 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
       <div class="mt-2 sm:mt-6">
         <h3 class="text-lg font-semibold text-gray-800 dark:text-neutral-200">
-          24/7 Support
+          24/7 chat Support
         </h3>
       </div>
     </div>

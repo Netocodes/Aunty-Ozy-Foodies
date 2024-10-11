@@ -1,18 +1,13 @@
 const fetchProducts = async () => {
   try {
-    const response = await fetch("./products.json", {
-      headers: {
-        accept: "application/json",
-      },
-    });
+    const response = await fetch("products.json");
 
     if (!response.ok) {
       throw new Error("Couldnt Get Product.json");
     }
-    const text = await response.text(); // Get response as text
-    console.log(text); // Check what you received
-    const data = JSON.parse(text);
-    // const data = await response.json();
+
+    const data = await response.json();
+    console.log(data);
     displayContent(data);
   } catch (error) {
     console.log(error.message);
@@ -26,7 +21,7 @@ const displayContent = (products) => {
     const productCard = document.createElement("div");
     productCard.setAttribute("data-id", product.id);
     productCard.innerHTML = `
-    <article class="relative flex flex-col overflow-hidden rounded-lg border">
+    <article class="scaleUp relative flex flex-col overflow-hidden rounded-lg border">
             <div class="aspect-square overflow-hidden">
               <img class="h-full w-full object-cover transition-all duration-300 group-hover:scale-125" src="${product.image}" alt="" />
             </div>
