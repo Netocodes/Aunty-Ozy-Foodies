@@ -1,7 +1,4 @@
 import "./index.css";
-import { Ripple } from "tw-elements";
-
-initTWE({ Ripple });
 
 // Get the button
 const mybutton = document.getElementById("btn-back-to-top");
