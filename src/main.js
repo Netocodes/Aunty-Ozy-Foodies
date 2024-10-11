@@ -53,7 +53,7 @@ window.addEventListener("scroll", scrollFunction);
 //   }
 // });
 
-import { Collapse, Dropdown, initTWE } from "tw-elements";
+import { Collapse, Dropdown, initTWE } from "../tw-elements";
 
 initTWE({ Collapse, Dropdown });
 // const navbar = document.getElementById("navbar");
