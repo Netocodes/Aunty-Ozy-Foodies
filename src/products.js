@@ -1,17 +1,21 @@
 const fetchProducts = async () => {
   try {
-    const response = await fetch("products.json");
-    console.log(response);
+    const response = await fetch("./products.json", {
+      headers: {
+        accept: "application/json",
+      },
+    });
+
     if (!response.ok) {
       throw new Error("Couldnt Get Product.json");
     }
-
-    const data = await response.json();
-
+    const text = await response.text(); // Get response as text
+    console.log(text); // Check what you received
+    const data = JSON.parse(text);
+    // const data = await response.json();
     displayContent(data);
   } catch (error) {
-    console.log(error.mesage);
-    console.log("Here is Your error =>", error.log);
+    console.log(error.message);
   }
 };
 
