@@ -35,16 +35,11 @@ const displayContent = (products) => {
               </div>
               <h3 class="mb-2 text-lg md:text-3xl font-bold text-gray-500">${product.name}</h3>
             </div>
-            <button id="removeBtn" onclick="remove()" data-twe-ripple-init  class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
+            <button data-twe-ripple-init  class="group mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
               <div class="flex w-full items-center justify-center bg-gray-100 text-xs uppercase transition group-hover:bg-[#E65C00] group-hover:text-white">Add</div>
               <div class="flex items-center justify-center bg-gray-200 px-5 transition group-hover:bg-[#fa8025] group-hover:text-white">+</div>
             </button> 
           </article>`;
-
-    const message = document.getElementById("availBtn");
-    function remove() {
-      message.classList.add("hidden");
-    }
 
     productContainer.appendChild(productCard);
   });
