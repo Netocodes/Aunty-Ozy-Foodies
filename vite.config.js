@@ -2,7 +2,7 @@ import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "",
+  base: "/",
   server: {
     sourcemap: false,
     mime: {
