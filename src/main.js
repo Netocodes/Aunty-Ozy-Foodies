@@ -1,8 +1,8 @@
 import "./index.css";
 
-import { Collapse, Dropdown, Input, initTWE } from "/tw-elements";
+import { Ripple, Collapse, Dropdown, Input, initTWE } from "/tw-elements";
 
-initTWE({ Collapse, Dropdown, Input });
+initTWE({ Ripple, Collapse, Dropdown, Input });
 
 document.addEventListener("DOMContentLoaded", () => {
   // Get the button
