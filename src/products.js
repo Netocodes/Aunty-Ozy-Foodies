@@ -1,9 +1,9 @@
 const fetchProducts = async () => {
   try {
-    const response = await fetch("products.json");
+    const response = await fetch("/products.json");
 
     if (!response.ok) {
-      throw new Error("Couldnt Get Product.json");
+      throw new Error("http error!=>", response.status);
     }
 
     const data = await response.json();
