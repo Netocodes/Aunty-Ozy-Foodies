@@ -6,6 +6,7 @@ export default {
     "./node_modules/tw-elements/js/**/*.js",
     "./node_modules/tw-elements/css/**/*.css",
   ],
+  darkMode: "media",
   theme: {
     extend: {},
   },
