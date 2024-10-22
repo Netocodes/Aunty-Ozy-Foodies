@@ -5,6 +5,7 @@ export default defineConfig({
   base: "/Aunty-Ozy-Foodies/",
   server: {
     sourcemap: false,
+
     mime: {
       // Set the MIME type for .js files to application/javascript
       js: "application/javascript",
