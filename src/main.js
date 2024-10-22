@@ -1,4 +1,5 @@
 import "./index.css";
+import { inject } from "@vercel/analytics";
 
 import { Ripple, Collapse, Dropdown, Input, initTWE } from "/tw-elements";
 
