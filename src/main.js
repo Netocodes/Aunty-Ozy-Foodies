@@ -101,24 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
     scale: 0.85,
     delay: 200,
     reset: false,
-    interval: 600,
+    interval: 100,
     distance: "20px",
     easing: "ease-in",
     opacity: 0,
   });
 });
-document.querySelectorAll('a[href^="#"]').forEach((link) => {
-  link.addEventListener("click", function (e) {
-    e.preventDefault(); // Prevent default anchor behavior
+// document.querySelectorAll("ar").forEach((link) => {
+//   link.addEventListener("click", function (e) {
+//     e.preventDefault(); // Prevent default anchor behavior
 
-    // Show loader
-    document.getElementById("loader").style.display = "flex";
+//     // Show loader
+//     document.getElementById("loader").style.display = "flex";
 
-    // Scroll to the target section after a brief delay
-    const targetId = this.getAttribute("href");
-    setTimeout(() => {
-      document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
-      document.getElementById("loader").style.display = "none"; // Hide loader
-    }, 500); // Adjust delay as needed
-  });
-});
+//     // Scroll to the target section after a brief delay
+//     const targetId = this.getAttribute("href");
+//     setTimeout(() => {
+//       document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+//       document.getElementById("loader").style.display = "none"; // Hide loader
+//     }, 500); // Adjust delay as needed
+//   });
+// });
