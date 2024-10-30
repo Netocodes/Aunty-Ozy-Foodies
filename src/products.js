@@ -21,6 +21,7 @@ const displayContent = (products) => {
     products.forEach((product) => {
       const productCard = document.createElement("div");
       productCard.setAttribute("data-id", product.id);
+
       productCard.innerHTML = `
       <article class="scaleUp relative flex flex-col overflow-hidden rounded-lg border">
               <div class="aspect-square overflow-hidden">
@@ -36,10 +37,15 @@ const displayContent = (products) => {
                 </div>
                 <h3 class="mb-2 text-lg md:text-3xl font-bold text-gray-500 dark:text-[#D3D3D3]">${product.name}</h3>
               </div>
+              <a href="https://wa.me/08064647273?text=Hello%20Aunty%20Ozy%2C%20can%20I%20get%20
+">
               <button data-twe-ripple-init  class="group shadow-md mx-auto mb-2 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
+             
                 <div class="flex w-full text-black items-center justify-center bg-gray-200 text-md font-semibold uppercase transition group-hover:bg-[#E65C00] group-hover:text-white">Add</div>
                 <div class="flex items-center justify-center bg-gray-300 px-5 transition group-hover:bg-[#fa8025] group-hover:text-white">+</div>
-              </button> 
+              </button>
+              </a>
+               
             </article>`;
 
       productContainer.appendChild(productCard);

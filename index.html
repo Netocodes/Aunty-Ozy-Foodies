@@ -5,9 +5,18 @@
     <!-- <link rel="icon" type="image/svg+xml" href="n" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#E65C00">
+    <meta property="description" content="Discover affordable, quality food online in Enugu State, brought to you by the trusted subsidiary of Emis Restaurants " />
+    <meta property="og:image" content="https://www.dropbox.com/scl/fi/e7atvjz14nozkxfveipms/IMG-20241007-WA0012.jpg?rlkey=15027gfc0dit8po5gnyam36l3&st=9z0q21yk&dl=0">
+    <link rel="icon" href="./src/asset/logo.jpg" type="image/x-icon">
+
     <script src="https://cdn.tailwindcss.com" defer></script>
     <title>Aunty Ozy Foodies</title>
-    
+    <style>
+      /* Optional: To hide content initially */
+      #content {
+          display: none; /* Hide content initially */
+      }
+  </style>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
@@ -27,7 +36,9 @@
    
   </head>
   <body class="bg-[#ffe7d3e7] dark:bg-[#2e1500]" >
-
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+      <canvas id="dotlottie-canvas" class=" w-34 md:w-72 "></canvas>
+  </div>
 
     <!-- Back to top button -->
        <button
@@ -56,7 +67,7 @@ id="btn-back-to-top">
 
     <!-- Main navigation container -->
     <nav
-      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-[#ffe7d3]  py-6 md:py-2 shadow-dark-mild dark:bg-[#2e1500] lg:flex-wrap lg:justify-start"
+      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-[#ffe7d3]  py-4 md:py-2 shadow-dark-mild dark:bg-[#2e1500] lg:flex-wrap lg:justify-start"
     >
       <div
         class="flex w-full flex-wrap items-center justify-between px-4 md:px-16"
@@ -423,7 +434,7 @@ id="btn-back-to-top">
 
 
 <!-- --------------- Products Page ------------------->
-    <section id="products" class=" bg-white/50 py-12 text-gray-800 dark:bg-black/75 sm:py-16 lg:py-20">
+    <section id="products-page" class=" bg-white/50 py-12 text-gray-800 dark:bg-black/75 sm:py-16 lg:py-20">
       <div class=" mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
          <!-- Title -->
   <div class=" scaleUp mx-auto max-w-5xl mb-8 lg:mb-14 text-center">
@@ -486,9 +497,9 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
 
     <!-- Icon Block -->
     <div class="col-span-6 col-start-4 sm:col-span-4 text-center">
-      <svg class="mx-auto h-auto w-[50px] md:w-7 text-orange-500 dark:text-neutral-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+      <svg class="mx-auto h-auto w-[50px] md:w-7 text-orange-500 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
       <div class="mt-2 sm:mt-6">
-        <h3 class="reveal text-xl md:text-lg font-semibold text-gray-800 ">
+        <h3 class="reveal text-xl md:text-lg font-semibold text-gray-800 dark:text-white ">
           24/7 chat Support
         </h3>
       </div>
@@ -680,6 +691,25 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
     <script type="module" src="./src/main.js"></script>
     <script type="module" src="./src/products.js"></script>
 
+    <script type="module">
+      import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+      const dotLottie = new DotLottie({
+          autoplay: true,
+          loop: true,
+          canvas: document.getElementById("dotlottie-canvas"),
+          src: "https://lottie.host/59eb12c4-36a7-49ad-a711-78f125e4fa1e/asyTFTWuFl.json", // replace with your .lottie or .json file URL
+      });
+      window.addEventListener('beforeunload', () => {
+            document.getElementById("loader").style.display = "flex"; // Show loader
+        });
+      
+      // Simulate loading
+      setTimeout(() => {
+          document.getElementById("loader").style.display = "none"; // Hide loader
+          document.getElementById("content").style.display = "block"; // Show content
+      }, 3000); // Adjust time as needed
+  </script>
 
     
     <!--Start of Tawk.to Script-->

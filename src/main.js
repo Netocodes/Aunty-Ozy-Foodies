@@ -91,12 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const sr = ScrollReveal();
   sr.reveal(".reveal", {
     delay: 200,
-    interval: 600,
+    interval: 100,
     distance: "20px",
     easing: "ease-in",
     opacity: 0,
     reset: false,
-    duration: 800,
   });
   sr.reveal(".scaleUp", {
     scale: 0.85,
@@ -106,5 +105,20 @@ document.addEventListener("DOMContentLoaded", () => {
     distance: "20px",
     easing: "ease-in",
     opacity: 0,
+  });
+});
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    // Show loader
+    document.getElementById("loader").style.display = "flex";
+
+    // Scroll to the target section after a brief delay
+    const targetId = this.getAttribute("href");
+    setTimeout(() => {
+      document.querySelector(targetId).scrollIntoView({ behavior: "smooth" });
+      document.getElementById("loader").style.display = "none"; // Hide loader
+    }, 500); // Adjust delay as needed
   });
 });
