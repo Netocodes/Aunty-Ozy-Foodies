@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sr" style="overscroll-behavior: none; scroll-behavior: auto;">
+<html lang="en" class="scroll-pt-20" style="overscroll-behavior: none; scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="n" /> -->
@@ -11,12 +11,7 @@
 
     <script src="https://cdn.tailwindcss.com" defer></script>
     <title>Aunty Ozy Foodies</title>
-    <style>
-      /* Optional: To hide content initially */
-      #content {
-          display: none; /* Hide content initially */
-      }
-  </style>
+   
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
@@ -32,12 +27,10 @@
           document.documentElement.classList.remove('dark')
       }
   </script>
-  
-   
   </head>
-  <body class="bg-[#ffe7d3e7] dark:bg-[#2e1500]" >
-    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
-      <canvas id="dotlottie-canvas" class=" w-34 md:w-72 "></canvas>
+  <body class="bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tr dark:from-orange-900 dark:to-amber-700" >
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white dark:bg-black z-50">
+      <canvas id="dotlottie-canvas" class=" w-34 md:w-96 "></canvas>
   </div>
 
     <!-- Back to top button -->
@@ -67,7 +60,7 @@ id="btn-back-to-top">
 
     <!-- Main navigation container -->
     <nav
-      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-[#ffe7d3]  py-4 md:py-2 shadow-dark-mild dark:bg-[#2e1500] lg:flex-wrap lg:justify-start"
+      class="flex-no-wrap fixed top-0 z-50 flex w-full items-center justify-between bg-gradient-to-bl from-orange-400 to-yellow-200  py-4 md:py-2 shadow-dark-mild dark:bg-gradient-to-tl dark:from-orange-900 dark:to-amber-700 lg:flex-wrap lg:justify-start"
     >
       <div
         class="flex w-full flex-wrap items-center justify-between px-4 md:px-16"
@@ -172,7 +165,7 @@ id="btn-back-to-top">
                 </g>
               </svg>
               <span
-                class="text-black text-lg md:text-3xl flex underline underline-offset-4 decoration-black drop-shadow-2xl font-extrabold dark:text-gray-300"
+                class="text-black text-lg md:text-3xl flex underline underline-offset-4 decoration-black drop-shadow-2xl font-extrabold dark:text-zinc-200"
                 >Aunty
                 <p class="text-[#fa8025]">Ozy</p>
 
@@ -200,7 +193,7 @@ id="btn-back-to-top">
                 class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
                 href="#products-page"
                 data-twe-nav-link-ref
-                >Products page</a
+                >Menu page</a
               >
             </li>
             <!-- Services link -->
@@ -210,6 +203,15 @@ id="btn-back-to-top">
                 href="/service.html"
                 data-twe-nav-link-ref
                 >Services</a
+              >
+            </li>
+            <!-- About us link -->
+            <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+              <a
+                class="text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                href="#about-us"
+                data-twe-nav-link-ref
+                >About-us</a
               >
             </li>
             <!-- Contact Us link -->
@@ -337,8 +339,19 @@ id="btn-back-to-top">
                   >Login/SignIn</a
                 >
               </li>
+              
             </ul>
           </div>
+          
+
+          <div class="relative px-3">
+            <button id="theme-toggle" type="button" class="flex justify-between text-gray-800 dark:text-gray-100   rounded-lg text-sm p-2.5">
+              <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+         <p class="sr-only">Dark mode toggler</p>
+            </button>  
+          </div>
+          
         </div>
         <!-- Right elements -->
       </div>
@@ -349,7 +362,7 @@ id="btn-back-to-top">
 
     <!----------------------- Hero Section ---------------------->
     <div id="home"
-      class="reveal  relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 mt-12 md:mt-24 text-center"
+      class="reveal  relative overflow-hidden rounded-lg bg-cover bg-no-repeat   md:mt-24 text-center"
       style="
         background-image: url('https://images.unsplash.com/photo-1569058242252-623df46b5025?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGpvbGxvZiUyMHJpY2V8ZW58MHx8MHx8fDI%3D');
         height: 500px;
@@ -359,23 +372,23 @@ id="btn-back-to-top">
         class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
         style="background-color: rgba(0, 0, 0, 0.6)"
       >
-        <div?
-          class="max-w-[85rem] mx-auto px-4 py-8  sm:px-6 lg:px-8 pt-10 pb-10"
+        <div
+          class="max-w-[85rem] mx-auto px-4 py-8  sm:px-6 lg:px-8 pt-10 "
         >
           <!-- Announcement Banner -->
           <div class="flex  justify-center">
             <a
-              class="inline-flex items-center gap-x-2 bg-[#ffe7d3] border border-gray-200 text-sm md:text-md  text-gray-600 p-2 px-3 rounded-full transition hover:border-gray-300 focus:outline-none focus:border-gray-300 dark:bg-[#1E1E1E] dark:border-neutral-700 dark:text-white dark:hover:border-neutral-600 dark:focus:border-neutral-600"
+              class="inline-flex items-center gap-x-2 bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tl dark:from-orange-900 dark:to-amber-600 border border-gray-200 text-sm md:text-md  text-gray-600 p-2 px-3 rounded-full transition hover:border-gray-300 focus:outline-none focus:border-gray-300  dark:border-neutral-700 dark:text-white "
               href="#"
             >
               Veiw our Services
               <span class="flex items-center gap-x-1">
                 <span
-                  class="border-s border-gray-500 text-green-600 ps-2 dark:text-blue-500 dark:border-neutral-700"
+                  class="border-s border-gray-500 text-green-600 ps-2 dark:text-green-500 dark:border-neutral-700"
                   >Explore</span
                 >
                 <svg
-                  class="shrink-0 size-4 text-blue-600"
+                  class="shrink-0 size-4 text-green-500"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -397,7 +410,7 @@ id="btn-back-to-top">
           <div class="mt-5 max-w-[65rem] text-center mx-auto">
             <h1
               id="typewriter"
-              class="block w-full font-bold gradient-text text-4xl md:text-5xl lg:text-6xl"
+              class="block w-full font-bold gradient-text drop-shadow-2xl line-clamp-3 text-4xl md:text-5xl lg:text-6xl"
             ></h1>
           </div>
           <!-- End Title -->
@@ -434,12 +447,13 @@ id="btn-back-to-top">
 
 
 <!-- --------------- Products Page ------------------->
-    <section id="products-page" class=" bg-white/50 py-12 text-gray-800 dark:bg-black/75 sm:py-16 lg:py-20">
+
+    <section id="products-page" class=" bg-[#ffe7d3e7] py-12 text-gray-800 dark:bg-black/75 sm:py-16 lg:py-20">
       <div class=" mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
          <!-- Title -->
   <div class=" scaleUp mx-auto max-w-5xl mb-8 lg:mb-14 text-center">
     <h2 class="text-3xl lg:text-4xl  underline underline-offset-4 decoration-orange-500 text-gray-800 font-bold dark:text-neutral-200">
-      Products Page
+      Menu Page
     </h2>
     <p class="mt-5 text-lg md:text-xl font-medium underline decoration-black/50 md:font-semibold text-gray-800 dark:text-neutral-200">
       To order food, click the chat button in the bottom right to chat with customer care, or use the add button to connect via WhatsApp.    </p>
@@ -453,10 +467,11 @@ id="btn-back-to-top">
         </div>
       </div>
     </section>
+ 
 <!-- --------------- Products Page ------------------->
 
     <!---------------- About Us page ---------------------->
- <div id="about-us">
+ <div id="about-us" >
 <div class="reveal max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
   <!-- Title -->
   <div class=" scaleUp mx-auto max-w-5xl mb-8 lg:mb-14 text-center">
@@ -474,8 +489,8 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
   <div class="reveal mx-auto max-w-5xl py-4 grid grid-cols-12 gap-6 lg:gap-8">
     <!-- Icon Block -->
     <div class="col-span-6 sm:col-span-4 text-center">
-      <svg class="mx-auto h-auto w-9 md:w-[50px] " version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#E65C00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#E65C00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3;} .st2{fill:none;stroke:#E65C00;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;} .st3{fill:none;} </style> <polyline class="st0" points="2,9 19,9 19,24 10,24 "></polyline> <circle class="st0" cx="24" cy="24" r="2"></circle> <circle class="st0" cx="8" cy="24" r="2"></circle> <polyline class="st0" points="19,24 19,13 25,13 29,18 29,24 26,24 "></polyline> <line class="st0" x1="4" y1="13" x2="13" y2="13"></line> <line class="st0" x1="2" y1="17" x2="11" y2="17"></line> <rect x="-288" y="-432" class="st3" width="536" height="680"></rect> </g></svg>            <div class="mt-2 sm:mt-6">
-        <h3 class="reveal text-lg font-semibold text-gray-800 dark:text-neutral-200">
+      <svg class="mx-auto h-auto w-9 md:w-[60px] " version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#E65C00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#E65C00;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:3;} .st2{fill:none;stroke:#E65C00;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;} .st3{fill:none;} </style> <polyline class="st0" points="2,9 19,9 19,24 10,24 "></polyline> <circle class="st0" cx="24" cy="24" r="2"></circle> <circle class="st0" cx="8" cy="24" r="2"></circle> <polyline class="st0" points="19,24 19,13 25,13 29,18 29,24 26,24 "></polyline> <line class="st0" x1="4" y1="13" x2="13" y2="13"></line> <line class="st0" x1="2" y1="17" x2="11" y2="17"></line> <rect x="-288" y="-432" class="st3" width="536" height="680"></rect> </g></svg>            <div class="mt-2 sm:mt-6">
+        <h3 class="reveal text-xl font-semibold text-gray-800 dark:text-neutral-200">
           Fast and reliable
         </h3>
       </div>
@@ -496,9 +511,9 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
 
     <!-- Icon Block -->
     <div class="col-span-6 col-start-4 sm:col-span-4 text-center">
-      <svg class="mx-auto h-auto w-[50px] md:w-7 text-orange-500 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+      <svg class="mx-auto h-auto w-[50px] md:w-8 text-orange-500 " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
       <div class="mt-2 sm:mt-6">
-        <h3 class="reveal text-xl md:text-lg font-semibold text-gray-800 dark:text-white ">
+        <h3 class="reveal text-2xl md:text-xl font-semibold text-gray-800 dark:text-white ">
           24/7 chat Support
         </h3>
       </div>
@@ -538,7 +553,7 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
 
 
  <!-------------------- Contact Us --------------------------->
-  <div id="contact-us" class="bg-white dark:bg-black/75 w-full overflow-hidden">
+  <div id="contact-us" class="bg-[#ffe7d3e7] dark:bg-black/75 w-full overflow-hidden">
 <div class="reveal max-w-7xl px-4 lg:px-8 py-12 lg:py-24 mx-auto">
   <div class="reveal mb-6 sm:mb-10 max-w-2xl text-center mx-auto">
     <h2 class="font-medium text-black text-2xl sm:text-4xl dark:text-white">
@@ -636,7 +651,7 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
 <footer
   class="reveal text-center text-surface  dark:text-white">
   <!--Sign-up form section-->
-  <div class="bg-[#ffe7d3e7] dark:bg-[#2e1500] px-6 pt-6">
+  <div class="bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tl dark:from-orange-900 dark:to-amber-600 px-6 pt-6">
     <form>
       <div
         class="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3">
@@ -649,7 +664,7 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
         <div class="relative md:mb-6" data-twe-input-wrapper-init>
           <input
             type="email"
-            class="peer block min-h-[auto] w-full rounded border-0 bg-white px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green-500 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-white px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green-500 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-black dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
             id="exampleFormControlInputEmail2"
             placeholder="Email address" />
           <label
@@ -676,11 +691,7 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
   <div class="bg-white dark:bg-black/75 p-4 text-center">
     © 2024 Copyright:
     <a class="font-semibold italic underline underline-offset-4 decoration-orange-500" href="#">Neto Codes</a>
-    <button id="theme-toggle" type="button" class="hidden justify-between  text-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
-      <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-      <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-      Enable Dark/Light Mode
-    </button> 
+  
   </div>
 </footer>
 <!------------------- Footer container----------------->
@@ -708,7 +719,6 @@ Aunty Ozy Foodies, a subsidiary of Emis Restaurant, specializes in diverse cater
       // Simulate loading
       setTimeout(() => {
           document.getElementById("loader").style.display = "none"; // Hide loader
-          document.getElementById("content").style.display = "block"; // Show content
       }, 3000); // Adjust time as needed
   </script>
 

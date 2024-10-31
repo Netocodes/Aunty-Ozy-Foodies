@@ -2,11 +2,12 @@
 export default {
   content: [
     "./index.html",
+    "./public/**/*.{js,ts,jsx,tsx}",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./node_modules/tw-elements/js/**/*.js",
     "./node_modules/tw-elements/css/**/*.css",
   ],
-  darkMode: "media",
+  darkMode: "class",
   theme: {
     extend: {},
   },

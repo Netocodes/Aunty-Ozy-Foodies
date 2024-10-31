@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="scroll-pt-20" style="overscroll-behavior: none; scroll-behavior: smooth;">
   <head>
     <meta charset="UTF-8" />
     <!-- <link rel="icon" type="image/svg+xml" href="n" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#E65C00" />
-    <!-- <link rel="stylesheet"  href="./src/index.css" /> -->
+    <meta name="theme-color" content="#E65C00">
+    <meta property="description" content="Discover affordable, quality food online in Enugu State, brought to you by the trusted subsidiary of Emis Restaurants " />
+    <meta property="og:image" content="https://www.dropbox.com/scl/fi/e7atvjz14nozkxfveipms/IMG-20241007-WA0012.jpg?rlkey=15027gfc0dit8po5gnyam36l3&st=9z0q21yk&dl=0">
+    <link rel="icon" href="./src/asset/logo.jpg" type="image/x-icon">
+
     <script src="https://cdn.tailwindcss.com" defer></script>
-    <!-- <script type="module">
-      import preline from "https://cdn.jsdelivr.net/npm/preline@2.5.0/+esm";
-    </script> -->
     <title>Aunty Ozy Foodies/Service-section</title>
 
     <link
@@ -24,19 +24,15 @@
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
     <script>
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (
-        localStorage.getItem("color-theme") === "dark" ||
-        (!("color-theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
+      if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
       } else {
-        document.documentElement.classList.remove("dark");
+          document.documentElement.classList.remove('dark')
       }
-    </script>
+  </script>
   </head>
-  <body class="bg-[#f1d1b7e7] dark:bg-[#2e1500]">
-    <div class="bg-black/75 fixed w-full z-50 py-4 px-8">
+  <body class="bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tr dark:from-orange-900 dark:to-amber-700">
+    <div class="bg-black/75 fixed w-full flex justify-between z-50 py-4 px-8">
       <ol class="flex items-center whitespace-nowrap">
         <li class="inline-flex items-center">
           <a
@@ -101,9 +97,44 @@
           Services
         </li>
       </ol>
+      <div class="flex items-center justify-end">
+        <button id="theme-toggle" type="button" class="flex justify-between text-gray-400 dark:text-gray-100   rounded-lg text-sm p-2.5">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+     <p class="sr-only">Dark mode toggler</p>
+        </button> 
+      </div>
     </div>
 
-    
+    <body class="bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tr dark:from-orange-900 dark:to-amber-700" >
+      <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+        <canvas id="dotlottie-canvas" class=" w-34 md:w-96 "></canvas>
+    </div>
+
+      <!-- Back to top button -->
+      <button
+      type="button"
+      data-twe-ripple-init
+      data-twe-ripple-color="light"
+      class="!fixed bottom-5 start-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg z-[50] focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+      id="btn-back-to-top">
+      <p class="sr-only">Back to top </p>
+      <span class="[&>svg]:w-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="3"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>
+      </span>
+             </button>
+         <!-- Back to top button -->
+      
 
 
     <!----------------------- Hero Section ---------------------->
@@ -197,93 +228,74 @@
 </div>
 <!-- End Icon Blocks -->
 
-<!-- Masonry Cards -->
-<div class="max-w-6xl px-4 py-10 bg-black sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Grid -->
-  <div class="grid sm:grid-cols-12 gap-6">
-    <div class="sm:self-end col-span-12 sm:col-span-7 md:col-span-8 lg:col-span-5 lg:col-start-3">
-      <!-- Card -->
-      <a class="group relative block rounded-xl overflow-hidden focus:outline-none" href="#">
-        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-          <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+<!------------------- Footer container --------------->
+<footer
+  class="reveal text-center text-surface  dark:text-white">
+  <!--Sign-up form section-->
+  <div class="bg-gradient-to-bl from-orange-400 to-yellow-200 dark:bg-gradient-to-tl dark:from-orange-900 dark:to-amber-600 px-6 pt-6">
+    <form>
+      <div
+        class="gird-cols-1 grid items-center justify-center gap-4 md:grid-cols-3">
+        <div class="md:mb-6 md:ms-auto">
+          <p>
+            <strong>Sign up for our newsletter</strong>
+          </p>
         </div>
-        <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-          <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-            Workplace personalities
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
 
-    <div class="sm:self-end col-span-12 sm:col-span-5 md:col-span-4 lg:col-span-3">
-      <!-- Card -->
-      <a class="group relative block rounded-xl overflow-hidden focus:outline-none" href="#">
-        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-          <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+        <div class="relative md:mb-6" data-twe-input-wrapper-init>
+          <input
+            type="email"
+            class="peer block min-h-[auto] w-full rounded border-0 bg-white px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 peer-focus:text-green-500 data-[twe-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-black dark:placeholder:text-black dark:autofill:shadow-autofill dark:peer-focus:text-primary [&:not([data-twe-input-placeholder-active])]:placeholder:opacity-0"
+            id="exampleFormControlInputEmail2"
+            placeholder="Email address" />
+          <label
+            for="exampleFormControlInputEmail2"
+            class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[twe-input-state-active]:-translate-y-[0.9rem] peer-data-[twe-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-400 dark:peer-focus:text-primary"
+            >Email address
+          </label>
         </div>
-        <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-          <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-            Women in engineering
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
 
-    <div class="col-span-12 md:col-span-4">
-      <!-- Card -->
-      <a class="group relative block rounded-xl overflow-hidden focus:outline-none" href="#">
-        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-          <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1606836576983-8b458e75221d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
+        <div class="mb-6 md:me-auto">
+          <button
+            type="button"
+            class="inline-block rounded bg-orange-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-orange-400  focus:outline-none focus:ring-0  active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+            data-twe-ripple-init
+            data-twe-ripple-color="light">
+            Subscribe
+          </button>
         </div>
-        <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-          <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-            Pride 2021
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
-
-    <div class="col-span-12 sm:col-span-6 md:col-span-4">
-      <!-- Card -->
-      <a class="group relative block rounded-xl overflow-hidden focus:outline-none" href="#">
-        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-          <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1598929438701-ef29ab0bb61a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
-        </div>
-        <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-          <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-            Data at Preline
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
-
-    <div class="col-span-12 sm:col-span-6 md:col-span-4">
-      <!-- Card -->
-      <a class="group relative block rounded-xl overflow-hidden focus:outline-none" href="#">
-        <div class="aspect-w-12 aspect-h-7 sm:aspect-none rounded-xl overflow-hidden">
-          <img class="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl w-full object-cover" src="https://images.unsplash.com/photo-1467043153537-a4fba2cd39ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80" alt="Masonry Cards Image">
-        </div>
-        <div class="absolute bottom-0 start-0 end-0 p-2 sm:p-4">
-          <div class="text-sm font-semibold text-gray-800 rounded-lg bg-white p-4 md:text-xl dark:bg-neutral-800 dark:text-neutral-200">
-            Empowered management
-          </div>
-        </div>
-      </a>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
+      </div>
+    </form>
   </div>
-  <!-- End Grid -->
-</div>
-<!-- End Masonry Cards -->
+
+  <!--Copyright section-->
+  <div class="bg-white dark:bg-black/75 p-4 text-center">
+    © 2024 Copyright:
+    <a class="font-semibold italic underline underline-offset-4 decoration-orange-500" href="#">Neto Codes</a>
+  
+  </div>
+</footer>
+<!------------------- Footer container----------------->
+
+<script type="module" src="../src/main.js"></script>
+<script type="module">
+  import { DotLottie } from "https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm";
+
+  const dotLottie = new DotLottie({
+      autoplay: true,
+      loop: true,
+      canvas: document.getElementById("dotlottie-canvas"),
+      src: "https://lottie.host/59eb12c4-36a7-49ad-a711-78f125e4fa1e/asyTFTWuFl.json", // replace with your .lottie or .json file URL
+  });
+  window.addEventListener('beforeunload', () => {
+        document.getElementById("loader").style.display = "flex"; // Show loader
+    });
+  
+  // Simulate loading
+  setTimeout(() => {
+      document.getElementById("loader").style.display = "none"; // Hide loader
+  }, 3000); // Adjust time as needed
+</script>
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},
