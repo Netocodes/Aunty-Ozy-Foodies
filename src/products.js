@@ -37,7 +37,7 @@ const displayContent = (products) => {
                 </div>
                 <h3 class="mb-2 text-lg md:text-3xl font-bold text-gray-700 dark:text-[#D3D3D3]">${product.name}</h3>
               </div>
-              <a href="https://wa.me/08064647273?text=Hello%20Aunty%20Ozy%2C%20can%20I%20get%20
+              <a href="https://wa.me/+2348064647273?text=Hello%20Aunty%20Ozy%2C%20can%20I%20get%20${product.name}%20
 ">
               <button data-twe-ripple-init  class="group shadow-md mx-auto mb-5 flex h-10 w-10/12 items-stretch overflow-hidden rounded-md text-gray-600">
              
