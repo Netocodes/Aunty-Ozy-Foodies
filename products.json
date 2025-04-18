@@ -1,80 +1,92 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Egusi Soup",
-    "price": "₦2000",
+    "price": 2000,
     "image": "https://miro.medium.com/v2/resize:fit:1400/1*n-K7Ji8Tl6W8jErCHXeoDw.jpeg",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Vegetable Soup",
-    "price": "₦2200",
+    "price": 2200,
     "image": "https://allnigerianfoods.com/wp-content/uploads/water-leave-soup-500x375.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
   {
-    "id": "9",
+    "id": 3,
     "name": "Okra Soup",
-    "price": "₦2000",
+    "price": 2000,
     "image": "https://cheflolaskitchen.com/wp-content/uploads/2015/10/DSC0066-okro-soup-.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
   {
-    "id": "10",
+    "id": 4,
     "name": "Onugbo Soup",
-    "price": "₦2000",
+    "price": 2000,
     "image": "https://i2.wp.com/www.afrolems.com/wp-content/uploads/2015/03/bitter-leaf-soup-recipe.jpg?ssl=10",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
   {
-    "id": "3",
+    "id": 5,
     "name": "Jollof Rice",
-    "price": "₦2500",
+    "price": 2500,
     "image": "https://allnigerianfoods.com/wp-content/uploads/jollof_rice_recipe1.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "rice"
   },
   {
-    "id": "4",
+    "id": 6,
     "name": "Fried rice",
-    "price": "₦2500",
+    "price": 2500,
     "image": "https://allnigerianfoods.com/wp-content/uploads/fried_rice_recipe.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "rice"
   },
   {
-    "id": "5",
+    "id": 7,
     "name": "Coconut Rice",
-    "price": "₦3000",
+    "price": 3000,
     "image": "https://9jafoodie.com/wp-content/uploads/2016/11/UNADJUSTEDNONRAW_thumb_3af2-600x401.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "rice"
+    
   },
   {
-    "id": "6",
+    "id": 8,
     "name": "Chiken pp.Soup",
-    "price": "₦3000",
+    "price": 3000,
     "image": "https://cheflolaskitchen.com/wp-content/uploads/2019/10/352-chicken-pepper-soup.jpg.webp",
-    "hidden": false
+    "link": "#",
+    "category": "protiens"
   },
   {
-    "id": "11",
+    "id": 9,
     "name": "Nsala Soup",
-    "price": "₦3000",
+    "price": 3000,
     "image": "https://allnigerianfoods.com/wp-content/uploads/Nsala-Soup1-500x375.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
   {
-    "id": "7",
+    "id": 10,
     "name": "Snail Soup",
-    "price": "₦3000",
+    "price": 3000,
     "image": "https://allnigerianfoods.com/wp-content/uploads/snail_soup.jpg",
-    "hidden": false
+    "link": "#",
+    "category": "soups"
   },
 
   {
-    "id": "8",
+    "id": 11,
     "name": "Oxtail",
-    "price": "3000",
+    "price": 3000,
     "image": "https://cheflolaskitchen.com/wp-content/uploads/2020/01/DSC0794Jamaican-Ox-tail-recipe.jpg.webp",
-    "hidden": false
+    "link": "#",
+    "category": "protiens"
   }
 ]
