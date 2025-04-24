@@ -1,6 +1,13 @@
+@import "flowbite/src/themes/default";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@plugin "flowbite/plugin";
+/* Removed invalid @source rule */
+
+* {
+  font-family: 'Book Antiqua', Courier, monospace;
+}
 
 @layer utilities {
   .gradient-text {
@@ -9,4 +16,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+.main-color{
+  background: linear-gradient(to right, #2dd4bf, #1f2937);
 }
