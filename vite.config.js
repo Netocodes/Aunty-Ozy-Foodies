@@ -19,7 +19,9 @@ import { defineConfig } from "vite";
 export default defineConfig(({ mode }) => ({
   base: mode === "github" ? "/Aunty-Ozy-Foodies/" : "./",
   server: {
-    sourcemap: false,
+    sourcemap: false, 
+      host: '0.0.0.0', // Listen on all network interfaces
+    
     mime: {
       // Set the MIME type for .js files to application/javascript
       js: "application/javascript",
